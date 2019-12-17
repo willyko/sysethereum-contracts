@@ -27,6 +27,12 @@ If you are new to the Syscoin <=> Ethereum bridge, please check the [docs](https
 * Install prerequisites
   * [nodejs](https://nodejs.org) v9.2.0 to v11.15.0.
   * [web3j](https://docs.web3j.io/command_line_tools/) command line tool
+  * [truffle](https://www.trufflesuite.com/) smart contract development tool
+  * [hdwallet](https://www.trufflesuite.com/) hd wallet tool
+  ```
+    npm install truffle -g
+    npm install @truffle/hdwallet-provider
+  ```
 * Clone this repo.
 * Install npm dependencies.
   * cd to the directory where the repo is cloned.
@@ -47,6 +53,16 @@ If you are new to the Syscoin <=> Ethereum bridge, please check the [docs](https
 
     # run tests
     npx truffle test
+  ```
+
+## Running the Scripts
+
+* Scripts are listed in the `scripts/` directory and they can be ran using the following command
+  ```
+     truffle exec --network rinkeby ./scripts/superblock-cli.js bridgetransfer_status --bridgetransferid 1
+  ```
+  ```
+     truffle exec --network rinkeby ./scripts/superblock-cli.js status
   ```
 
 ## Deployment
